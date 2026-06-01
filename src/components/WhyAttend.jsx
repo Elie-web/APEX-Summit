@@ -33,7 +33,7 @@ const SMALL = [
 
 export default function WhyAttend() {
   return (
-    <section style={{ background: 'var(--bg-dark)', padding: '96px 0' }}>
+    <section style={{ background: 'var(--dark)', padding: '96px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header */}
@@ -49,14 +49,14 @@ export default function WhyAttend() {
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 900,
               fontSize: 'clamp(2rem, 4vw, 3.2rem)',
-              color: 'var(--text-dark)',
+              color: 'var(--t-light)',
               lineHeight: 1.08,
               letterSpacing: '-0.03em',
               maxWidth: '18ch',
             }}>
               Ce que vous ramenez de deux jours à Paris.
             </h2>
-            <p style={{ fontSize: 14, color: 'var(--text-dim)', maxWidth: '44ch', lineHeight: 1.7, fontWeight: 450 }}>
+            <p style={{ fontSize: 14, color: 'var(--t-dim)', maxWidth: '44ch', lineHeight: 1.7, fontWeight: 450 }}>
               Les gens qui avancent vite ont un truc en commun : ils ne le font pas seuls.
               Ils se retrouvent dans les mêmes salles, et partagent ce qu'ils ont vraiment appris.
               Pas ce qu'ils publient sur LinkedIn.
@@ -65,8 +65,8 @@ export default function WhyAttend() {
         </motion.div>
 
         {/* 3 stat cards, stat first */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 16 }}
-          className="grid-cols-1 md:grid-cols-3">
+        <div style={{ display: 'grid', gap: 16, marginBottom: 16 }}
+          className="grid grid-cols-1 md:grid-cols-3">
           {REASONS.map((r, i) => (
             <motion.div
               key={i}
@@ -75,7 +75,7 @@ export default function WhyAttend() {
               viewport={{ once: true, margin: '-30px' }}
               transition={{ type: 'spring', stiffness: 80, damping: 20, delay: i * 0.1 }}
               style={{
-                background: 'var(--bg-dark-2)',
+                background: 'var(--dark-2)',
                 border: '1px solid rgba(255,255,255,0.07)',
                 borderRadius: 18,
                 padding: '28px 28px 24px',
@@ -98,11 +98,11 @@ export default function WhyAttend() {
               <p style={{
                 fontFamily: 'Outfit', fontWeight: 800,
                 fontSize: 'clamp(1.1rem, 1.8vw, 1.45rem)',
-                color: 'var(--text-dark)', letterSpacing: '-0.01em', marginBottom: 4,
+                color: 'var(--t-light)', letterSpacing: '-0.01em', marginBottom: 4,
               }}>
                 {r.keyword}
               </p>
-              <p style={{ fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.4, marginBottom: 20 }}>
+              <p style={{ fontSize: 12, color: 'var(--t-muted)', lineHeight: 1.4, marginBottom: 20 }}>
                 {r.detail}
               </p>
 
@@ -113,7 +113,7 @@ export default function WhyAttend() {
               <p style={{
                 fontFamily: 'Outfit', fontWeight: 700,
                 fontSize: 15,
-                color: 'var(--text-dark)',
+                color: 'var(--t-light)',
                 lineHeight: 1.3,
               }}>
                 {r.title}
@@ -123,8 +123,8 @@ export default function WhyAttend() {
         </div>
 
         {/* 3 small cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}
-          className="grid-cols-1 md:grid-cols-3">
+        <div style={{ display: 'grid', gap: 16 }}
+          className="grid grid-cols-1 md:grid-cols-3">
           {SMALL.map((r, i) => {
             const Icon = r.icon;
             return (
@@ -135,7 +135,7 @@ export default function WhyAttend() {
                 viewport={{ once: true, margin: '-20px' }}
                 transition={{ type: 'spring', stiffness: 80, damping: 20, delay: i * 0.08 }}
                 style={{
-                  background: 'var(--bg-dark-2)',
+                  background: 'var(--dark-2)',
                   border: '1px solid rgba(255,255,255,0.07)',
                   borderRadius: 14,
                   padding: '18px 20px',
@@ -155,11 +155,11 @@ export default function WhyAttend() {
                 <div>
                   <p style={{
                     fontFamily: 'Outfit', fontWeight: 700, fontSize: 13,
-                    color: 'var(--text-dark)', marginBottom: 2,
+                    color: 'var(--t-light)', marginBottom: 2,
                   }}>
                     {r.title}
                   </p>
-                  <p style={{ fontSize: 12, color: 'var(--text-dim)', lineHeight: 1.5 }}>{r.desc}</p>
+                  <p style={{ fontSize: 12, color: 'var(--t-dim)', lineHeight: 1.5 }}>{r.desc}</p>
                 </div>
               </motion.div>
             );

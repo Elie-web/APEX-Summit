@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { EVENT } from '../data/event';
 
 function pad(n) { return String(n).padStart(2, '0'); }
@@ -31,7 +30,7 @@ function Unit({ value, label, dark = true }) {
           fontSize: 26,
           fontVariantNumeric: 'tabular-nums',
           lineHeight: 1,
-          color: dark ? 'var(--text-dark)' : 'var(--text-light)',
+          color: dark ? 'var(--t-light)' : 'var(--t-dark)',
         }}>
           {value}
         </span>
@@ -43,7 +42,7 @@ function Unit({ value, label, dark = true }) {
         fontWeight: 700,
         letterSpacing: '0.16em',
         textTransform: 'uppercase',
-        color: dark ? 'var(--text-muted)' : '#888',
+        color: dark ? 'var(--t-dim)' : '#888',
       }}>
         {label}
       </span>

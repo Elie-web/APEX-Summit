@@ -284,6 +284,15 @@ h2, h3 {
   .navbar-burger  { display: none; }
 }
 
+/* ── TESTIMONIALS: stacked on mobile, carousel on desktop ── */
+/* Brief: never hide reviews behind a carousel on mobile. */
+.testi-desktop { display: none; }
+.testi-mobile  { display: flex; flex-direction: column; gap: 14px; }
+@media (min-width: 768px) {
+  .testi-desktop { display: block; }
+  .testi-mobile  { display: none; }
+}
+
 /* ── REDUCED MOTION ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
